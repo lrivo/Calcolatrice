@@ -7,8 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="300" Background="Black">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <!-- Start AC Button -->
-        <Button x:Name="AC_btn" Width="45" Height="45" Content="AC" Margin="26,120,229,319">
+        <Button x:Name="AC_btn" Width="45" Height="45" Content="AC" Grid.Row="2" Grid.Column="0" Click="ACBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -21,7 +36,7 @@
         <!-- End AC button -->
 
         <!-- Start Parethesis button -->
-        <Button x:Name="Phr_btn" Width="45" Height="45" Content="( )" Margin="76,120,179,319">
+        <Button x:Name="Phr_btn" Width="45" Height="45" Content="( )" Grid.Row="2" Grid.Column="2" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -34,7 +49,7 @@
         <!-- End Parenthesis button -->
 
         <!-- Start Modulo Button -->
-        <Button x:Name="Modulo_btn" Width="45" Height="45" Content="%" Margin="126,120,129,319">
+        <Button x:Name="Undo_btn" Width="45" Height="45" Content="Undo" Grid.Row="2" Grid.Column="1" Click="UndoBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -47,7 +62,7 @@
         <!-- End Modulo Button -->
 
         <!-- Start Division Button -->
-        <Button x:Name="Division_btn" Width="45" Height="45" Content="/" Margin="176,120,79,319">
+        <Button x:Name="Division_btn" Width="45" Height="45" Content="/" Grid.Row="2" Grid.Column="3" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -60,7 +75,7 @@
         <!-- End Division Button -->
 
         <!-- Start 7 button -->
-        <Button x:Name="Seven_btn" Width="45" Height="45" Content="7" Margin="26,180,229,259">
+        <Button x:Name="Seven_btn" Width="45" Height="45" Content="7" Grid.Row="3" Grid.Column="0" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -73,7 +88,7 @@
         <!-- End 7 button -->
 
         <!-- Start 8 button -->
-        <Button x:Name="Eight_btn" Width="45" Height="45" Content="8" Margin="76,180,179,259">
+        <Button x:Name="Eight_btn" Width="45" Height="45" Content="8" Grid.Row="3" Grid.Column="1" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -86,7 +101,7 @@
         <!-- End 8 button -->
 
         <!-- Start 9 button -->
-        <Button x:Name="Nine_btn" Width="45" Height="45" Content="9" Margin="128,180,128,259">
+        <Button x:Name="Nine_btn" Width="45" Height="45" Content="9" Grid.Row="3" Grid.Column="2" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -99,7 +114,7 @@
         <!-- End 9 button -->
 
         <!-- Start multiply button -->
-        <Button x:Name="Multiply_btn" Width="45" Height="45" Content="x" Margin="178,180,77,259">
+        <Button x:Name="Multiply_btn" Width="45" Height="45" Content="x" Grid.Row="3" Grid.Column="3" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -112,7 +127,7 @@
         <!-- End Multiply button -->
 
         <!-- Start 4 button-->
-        <Button x:Name="Four_btn" Width="45" Height="45" Content="4" Margin="26,230,229,209">
+        <Button x:Name="Four_btn" Width="45" Height="45" Content="4" Grid.Row="4" Grid.Column="0" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -125,7 +140,7 @@
         <!-- End 4 button -->
 
         <!-- Start 5 button-->
-        <Button x:Name="Five_btn" Width="45" Height="45" Content="5" Margin="76,230,179,209">
+        <Button x:Name="Five_btn" Width="45" Height="45" Content="5" Grid.Row="4" Grid.Column="1" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -138,7 +153,7 @@
         <!-- End 5 button -->
 
         <!-- Start 6 button-->
-        <Button x:Name="Six_btn" Width="45" Height="45" Content="6" Margin="128,230,127,209">
+        <Button x:Name="Six_btn" Width="45" Height="45" Content="6" Grid.Row="4" Grid.Column="2" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -151,7 +166,7 @@
         <!-- End 6 button -->
 
         <!-- Start - button -->
-        <Button x:Name="Minus_btn" Width="45" Height="45" Content="-" Margin="178,230,77,209">
+        <Button x:Name="Minus_btn" Width="45" Height="45" Content="-" Grid.Row="4" Grid.Column="3" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -164,7 +179,7 @@
         <!-- End - button -->
 
         <!-- Start 1 button -->
-        <Button x:Name="One_btn" Width="45" Height="45" Content="1" Margin="26,280,229,159">
+        <Button x:Name="One_btn" Width="45" Height="45" Content="1" Grid.Row="5" Grid.Column="0" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -177,7 +192,7 @@
         <!-- End 1 button -->
 
         <!-- Start 2 button -->
-        <Button x:Name="Two_btn" Width="45" Height="45" Content="2" Margin="76,280,179,159">
+        <Button x:Name="Two_btn" Width="45" Height="45" Content="2" Grid.Row="5" Grid.Column="1" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -190,7 +205,7 @@
         <!-- End 2 button -->
 
         <!-- Start 3 button -->
-        <Button x:Name="Six_btn_Copy" Width="45" Height="45" Content="3" Margin="128,280,127,159">
+        <Button x:Name="Six_btn_Copy" Width="45" Height="45" Content="3" Grid.Row="5" Grid.Column="2" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -203,7 +218,7 @@
         <!-- End 3 button -->
 
         <!-- Start + button-->
-        <Button x:Name="Plus_btn" Width="45" Height="45" Content="+" Margin="178,280,77,159">
+        <Button x:Name="Plus_btn" Width="45" Height="45" Content="+" Grid.Row="5" Grid.Column="3" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -214,7 +229,7 @@
             </Button.Template>
         </Button>
         <!-- End + button -->
-        <Button x:Name="One_btn_Copy" Width="45" Height="45" Content="1" Margin="26,330,229,109">
+        <Button x:Name="Zero_btn" Width="45" Height="45" Content="0" Grid.Row="6" Grid.Column="0" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -224,7 +239,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="Two_btn_Copy" Width="45" Height="45" Content="2" Margin="76,330,179,109">
+        <Button x:Name="Dot_btn" Width="45" Height="45" Content="," Grid.Row="6" Grid.Column="1" Click="OperationBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -234,7 +249,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="Six_btn_Copy1" Width="45" Height="45" Content="3" Margin="128,330,127,109">
+        <Button x:Name="Del_btn" Width="45" Height="45" Content="DEL" Grid.Row="6" Grid.Column="2" Click="DelBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -244,16 +259,24 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="Plus_btn_Copy" Width="45" Height="45" Content="+" Margin="178,330,77,109">
+        <Button x:Name="Equals_btn" Width="45" Height="45" Content="=" Grid.Row="6" Grid.Column="3" Click="EqualsBtnClick">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
-                        <Ellipse Fill="LightBlue"/>
+                        <Ellipse Fill="White"/>
                         <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                 </ControlTemplate>
             </Button.Template>
         </Button>
+        <Label x:Name="OperationLabel" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="2" Width="300" Height="138" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF1F1F1F" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
         <!-- End + button -->
     </Grid>
 </Window>
